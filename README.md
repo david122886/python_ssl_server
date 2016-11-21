@@ -20,7 +20,7 @@
 7. 生成ssl.cert和ssl.key文件[文档](http://werkzeug.pocoo.org/docs/0.11/serving/)  
  > $ openssl genrsa 1024 > ssl.key  
  > $ openssl req -new -x509 -nodes -sha1 -days 365 -key ssl.key > ssl.cert  
- 并把生成ssl.key和ssl.cert拷贝到项目中
+ 并把生成ssl.key和ssl.cert拷贝到项目中  
  ![步骤1](1.png)
  
 ##步骤：
