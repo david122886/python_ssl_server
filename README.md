@@ -1,10 +1,10 @@
 # python_ssl_server
 一个简单搭建支持https  python web服务器和简单IOS端https实现,使用mac系统开发，pythonIDE使用Pycharm,python3.5
-##步骤：
+##准备：
 1. pip --version  
    查看pip版本最好使用最新的，我用pip 9.0.1
 2. python setup.py install --record files.txt  
-   如果没有安装，https://pypi.python.org/pypi/pip下载安装
+   如果没有安装，[下载安装](https://pypi.python.org/pypi/pip)
 3. pip install --upgrade pip  
    如果版本比较低，使用此命令更新
 4. pip list  
@@ -17,7 +17,16 @@
   如果没有上面库，安装这些库  
 6. pip install --upgrade Werkzeug  
   如果已经安装但是版本比较低，使用命令更新  
-
+7. 生成ssl.cert和ssl.key文件[文档](http://werkzeug.pocoo.org/docs/0.11/serving/)
+   > $ openssl genrsa 1024 > ssl.key
+   > $ openssl req -new -x509 -nodes -sha1 -days 365 -key ssl.key > ssl.cert
+##步骤：
+1. Pycharm创建一个flask项目
+2.导入需要的库
+'from flask import Flask
+import sys,os
+import json'
+3.
 ##坑：
 1.项目名不能和系统默认模块或者第三方模块名相同，不然无法找到正确模块（AttributeError: module 'ssl' has no attribute 'PROTOCOL_SSLv23’）
 
