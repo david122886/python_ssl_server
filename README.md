@@ -22,7 +22,7 @@
  > $ openssl req -new -x509 -nodes -sha1 -days 365 -key ssl.key > ssl.cert  
  并把生成ssl.key和ssl.cert拷贝到项目中
  ![步骤1](1.png)
-8. 使用非常简单，两行代码搞定
+8. 使用非常简单，两行代码搞定  
 'from flask import Flask
 import sys,os
 import json
