@@ -17,7 +17,7 @@
   如果没有上面库，安装这些库  
 6. pip install --upgrade Werkzeug  
   如果已经安装但是版本比较低，使用命令更新  
-7. 生成ssl.cert和ssl.key文件[文档](http://werkzeug.pocoo.org/docs/0.11/serving/)
+7. 生成ssl.cert和ssl.key文件[文档](http://werkzeug.pocoo.org/docs/0.11/serving/)  
    > $ openssl genrsa 1024 > ssl.key
    > $ openssl req -new -x509 -nodes -sha1 -days 365 -key ssl.key > ssl.cert
 ##步骤：
