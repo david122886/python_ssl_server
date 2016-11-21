@@ -22,7 +22,9 @@
  > $ openssl req -new -x509 -nodes -sha1 -days 365 -key ssl.key > ssl.cert  
  并把生成ssl.key和ssl.cert拷贝到项目中
  ![步骤1](1.png)
-8. 使用非常简单，两行代码搞定  
+ 
+##步骤：
+1. 使用非常简单，两行代码搞定  
 ```
 from flask import Flask
 import sys,os
@@ -45,15 +47,6 @@ if __name__ == '__main__':
     app.run(debug=1, host='192.168.1.129', port=5500, ssl_context=context)
 
 ```
-##步骤：
-1. Pycharm创建一个flask项目
-2.导入需要的库
-```
-from flask import Flask
-import sys,os
-import json
-```
-3.
 ##坑：
 1.项目名不能和系统默认模块或者第三方模块名相同，不然无法找到正确模块（AttributeError: module 'ssl' has no attribute 'PROTOCOL_SSLv23’）
 
