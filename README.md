@@ -1,7 +1,8 @@
 # python_ssl_server
 一个简单搭建支持https  python web服务器和简单IOS端https实现,使用mac系统开发，pythonIDE使用Pycharm,python3.5
 ##步骤：
-1. pip --version 
+1. pip --version  
+
    查看pip版本最好使用最新的，我用pip 9.0.1
 2. python setup.py install --record files.txt
    如果没有安装，https://pypi.python.org/pypi/pip下载安装
