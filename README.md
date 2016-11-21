@@ -23,7 +23,8 @@
  并把生成ssl.key和ssl.cert拷贝到项目中
  ![步骤1](1.png)
 8. 使用非常简单，两行代码搞定  
-""" from flask import Flask
+·
+from flask import Flask
 import sys,os
 import json
 app = Flask(__name__)
@@ -42,6 +43,7 @@ if __name__ == '__main__':
     """
     context = (sys.path[0] + '/ssl.cert', sys.path[0] + '/ssl.key')
     app.run(debug=1, host='192.168.1.129', port=5500, ssl_context=context)
+·
 ##步骤：
 1. Pycharm创建一个flask项目
 2.导入需要的库
